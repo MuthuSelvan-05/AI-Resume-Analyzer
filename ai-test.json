@@ -1,0 +1,42 @@
+{
+  "resume_text": "Computer Science student with experience building Java Spring Boot applications and working with MySQL databases.",
+  "resume": {
+    "name": "Muthu Selvan",
+    "email": "muthu@example.com",
+    "phone": null,
+    "education": [],
+    "experience": [],
+    "projects": [],
+    "certifications": [],
+    "achievements": [],
+    "languages": [],
+    "skills": [
+      "java",
+      "spring boot",
+      "mysql"
+    ]
+  },
+  "job_text": "We are looking for a Java Developer with Java, Spring Boot and MySQL experience. Experience with Docker is preferred.",
+  "job": {
+    "title": "Java Developer",
+    "company": "Example Company",
+    "required_skills": [
+      "java",
+      "spring boot",
+      "mysql"
+    ],
+    "preferred_skills": [
+      "docker"
+    ],
+    "experience_years": 1.0,
+    "education_requirements": [
+      "Computer Science"
+    ],
+    "keywords": [
+      "java",
+      "spring boot",
+      "mysql",
+      "api"
+    ]
+  }
+}
