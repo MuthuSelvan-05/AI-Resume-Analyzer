@@ -162,6 +162,26 @@ function Resumes() {
       setDeletingId(null);
     }
   };
+    const handleDownload = async (resumeId, versionNumber) => {
+    try {
+      setError("");
+      setSuccessMessage("");
+
+      await resumeService.downloadVersion(
+        resumeId,
+        versionNumber,
+      );
+
+      setSuccessMessage("Resume downloaded successfully.");
+    } catch (requestError) {
+      console.error("Resume download failed:", requestError);
+
+      setError(
+        requestError.response?.data?.message ||
+          "Unable to download the resume.",
+      );
+    }
+  };
 
   const formatDate = (dateValue) => {
     if (!dateValue) {
@@ -374,18 +394,19 @@ function Resumes() {
                 </button>
 
                 {resume.latestVersion && (
-                  <a
-                    href={resumeService.getDownloadUrl(
-                      resume.id,
-                      resume.latestVersion.versionNumber,
-                    )}
-                    target="_blank"
-                    rel="noreferrer"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownload(
+                        resume.id,
+                        resume.latestVersion.versionNumber,
+                      )
+                    }
                     className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-3.5 py-2 text-sm text-slate-300 transition hover:bg-slate-800"
                   >
                     <Download size={16} />
                     Download
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
