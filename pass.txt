@@ -1,7 +1,0 @@
-Set-Content .\backend\.env.example "DB_USERNAME=root`nDB_PASSWORD=200505`nJWT_SECRET=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXRodXJhamtvbWJhbjVAZ21haWwuY29tIiwiaWF0IjoxNzg5ODM2NTc1LCJleHAiOjE3ODk5MjI5NzV9.S-Lnjl--5X-QjMPp4xqwGMTzjyA3xvH4gyxflsNOz5rFhWs2uJAqAWQCh9_OgIgM3k9maut0RLP89Na30r6Yag`nAI_SERVICE_URL=http://localhost:8000"
-cd C:\Users\ELCOT\Documents\AI-Resume-Analyzer\backend
-$env:DB_USERNAME="root"
-$env:DB_PASSWORD="200505"
-$env:JWT_SECRET="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXRodXJhamtvbWJhbjVAZ21haWwuY29tIiwiaWF0IjoxNzg5ODM2NTc1LCJleHAiOjE3ODk5MjI5NzV9.S-Lnjl--5X-QjMPp4xqwGMTzjyA3xvH4gyxflsNOz5rFhWs2uJAqAWQCh9"
-$env:AI_SERVICE_URL="http://localhost:8000"
-mvn spring-boot:run
